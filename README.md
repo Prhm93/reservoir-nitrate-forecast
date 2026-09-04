@@ -139,9 +139,7 @@ The features used here are as follows.
 
 Formally, for day $d$:
 
-$$
-\text{doy\_sin} = \sin\left(\frac{2\pi d}{365}\right), \quad \text{doy\_cos} = \cos\left(\frac{2\pi d}{365}\right)
-$$
+$$\text{doy\_sin} = \sin\!\left(\frac{2\pi d}{365}\right), \qquad \text{doy\_cos} = \cos\!\left(\frac{2\pi d}{365}\right)$$
 
 One rule matters more than the rest: every feature uses only past values. If a feature for day $t$ used tomorrow's rainfall, the model would score wonderfully on the test set but would be useless in production, because tomorrow's rainfall is not knowable today. This mistake is called data leakage, and it is the single most common way that time-series forecasting projects fail silently. It is worth checking twice.
 
